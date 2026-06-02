@@ -1,104 +1,128 @@
-\# QueryMate AI
+# QueryMate AI
 
+AI-powered multilingual document assistant built using Streamlit, Ollama, and Qwen2.5. QueryMate enables users to upload documents, ask questions in multiple languages, and receive intelligent responses through both text and voice.
 
+## Features
 
-AI-powered multilingual document assistant built using Streamlit, Ollama, and Qwen2.5.
+* Upload and analyze PDF documents
+* Ask questions directly from document content
+* Multilingual support:
 
+  * English
+  * Hindi
+  * Marathi
+* Speech-to-Text for voice queries
+* Text-to-Speech for voice responses
+* Secure user authentication
+* Query history tracking using SQLite
+* Offline AI processing with Ollama
+* Fast and lightweight local deployment
 
+## Technologies Used
 
-\## Features
+### Frontend
 
+* Streamlit
+* HTML
+* CSS
 
+### Backend
 
-\* Upload PDF documents
+* Python
 
-\* Ask questions from documents
+### AI & NLP
 
-\* English, Hindi, and Marathi support
+* Ollama
+* Qwen2.5 (1.5B)
+* SpeechRecognition
+* pyttsx3
 
-\* Speech-to-Text
+### Database
 
-\* Text-to-Speech
+* SQLite
 
-\* Query history tracking
+### Document Processing
 
-\* Offline AI using Ollama
+* PyPDF2
 
-\* Secure login system
+## System Architecture
 
+![Architecture](assets/architecture.png)
 
+### Workflow
 
-\## Technologies Used
+1. User uploads a PDF document
+2. Text is extracted from the document
+3. User asks a question using text or voice
+4. Query is processed by Qwen2.5 through Ollama
+5. AI generates an answer based on document content
+6. Response is displayed and can be read aloud
+7. Query and response are stored in history
 
+## Application Screenshots
 
+### Login Page
 
-\* Python
+![Login](assets/screenshots/login.png)
 
-\* Streamlit
+### Dashboard
 
-\* Ollama
+![Dashboard](assets/screenshots/dashboard.png)
 
-\* Qwen2.5 (1.5B)
+### Upload PDF
 
-\* SQLite
+![Upload PDF](assets/screenshots/upload.png)
 
-\* PyPDF2
+### Ask Query
 
-\* SpeechRecognition
+![Ask Query](assets/screenshots/query.png)
 
-\* pyttsx3
+### Query History
 
+![History](assets/screenshots/history.png)
 
+## Installation
 
-\## Project Architecture
-
-
-
-1\. PDF Upload \& Text Extraction
-
-2\. Document Processing
-
-3\. Local LLM Question Answering
-
-4\. Voice Input
-
-5\. Voice Output
-
-6\. Query History Storage
-
-
-
-\## Run Locally
-
-
+Clone the repository:
 
 ```bash
-
 git clone https://github.com/Frozon56/QueryMate-AI.git
-
-
-
 cd QueryMate-AI
-
-
-
-pip install -r requirements.txt
-
-
-
-streamlit run app.py
-
 ```
 
+Install dependencies:
 
+```bash
+pip install -r requirements.txt
+```
 
-\## Author
+Install and run Ollama:
 
+```bash
+ollama run qwen2.5:1.5b
+```
 
+Start the application:
 
-Pranjali Tanaji Jadhav
+```bash
+streamlit run app.py
+```
 
-Final Year B.Tech CSE
+## Future Enhancements
 
+* Support for DOCX, PPTX, and TXT files
+* Advanced RAG (Retrieval-Augmented Generation)
+* Document summarization
+* Cloud deployment
+* User profile management
+* OCR support for scanned PDFs
 
+## Author
 
+**Pranjali Tanaji Jadhav**
+
+Final Year B.Tech Computer Science and Engineering
+
+## License
+
+This project is developed for educational and research purposes.
