@@ -1,0 +1,33 @@
+# Virtual Environment
+venv/
+env/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Database Files
+history.db
+users.db
+
+# Environment Variables
+.env
+
+# Audio Files
+audio.mp3
+temp.mp3
+
+# VS Code
+.vscode/
+
+# Streamlit Cache
+.streamlit/secrets.toml
+
+# Logs
+*.log
+
+# System Files
+.DS_Store
+Thumbs.db
